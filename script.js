@@ -7,7 +7,15 @@ const namesTab = ["BAND", "SEG", "EOS", "BAS", "MON", "LYM", "MBL", "PML", "MIE"
 
 let sum = 0
 
-function countPercent() {
+function counting() {
+    if(sum % 100 == 0){
+        summary.classList.add("summaryDone")
+        quantity.classList.add("summaryDone")
+    }else{
+        summary.classList.remove("summaryDone")
+        quantity.classList.remove("summaryDone")
+    }
+    
     quantity.textContent = ""
     let cellCounterTab = document.querySelectorAll(".cellCounter")
 
@@ -60,7 +68,7 @@ namesTab.forEach(name => {
         sum++
         summary.textContent = "Suma: " + sum
         cellCounter.textContent = parseInt(cellCounter.textContent) + 1
-        countPercent()
+        counting()
     })
 
     minus.addEventListener("click", () => {
@@ -69,6 +77,6 @@ namesTab.forEach(name => {
             summary.textContent = "Suma: " + sum
             cellCounter.textContent = parseInt(cellCounter.textContent) - 1 
         }
-        countPercent()
+        counting()
     })
 });

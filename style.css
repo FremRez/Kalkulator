@@ -16,6 +16,13 @@ body{
 .summary{
     font-size: 30px;
     padding: 20px;
+    transition: ease-in-out 200ms;
+}
+.summaryDone{
+    color: #ebcb8b;
+}
+.summaryDone p{
+    color: #ebcb8b;
 }
 .separator{
     width: 60vw;
@@ -23,6 +30,9 @@ body{
     margin-left: auto;
     margin-right: auto;
     background-color: #d8dee9;
+}
+.quantity p{
+    transition: ease-in-out 200ms;
 }
 .result p{
     padding: 5px;
