@@ -18,7 +18,7 @@ body{
     padding: 20px;
 }
 .separator{
-    width: 40vw;
+    width: 60vw;
     height: 1px;
     margin-left: auto;
     margin-right: auto;
@@ -31,7 +31,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
-    height: 50vh;
+    height: 40vh;
 }
 .calculator div{
     display: grid;
