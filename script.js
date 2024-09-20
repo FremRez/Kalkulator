@@ -20,6 +20,16 @@ function countPercent() {
             quantityPlace.textContent = cellName + ": " + ((parseInt(counter.textContent) / sum)*100).toFixed(0) + "%"
             quantity.appendChild(quantityPlace)
         }
+
+        let buttonTab = document.querySelectorAll("button")
+        buttonTab.forEach(button => {
+            button.classList.remove("plusClicked", "minusClicked")
+            if (event.target.textContent == "+") {
+                event.target.classList.add("plusClicked")
+            }else if (event.target.textContent == "-") {
+                event.target.classList.add("minusClicked")
+            }
+        });
     });
 }
 
@@ -51,14 +61,6 @@ namesTab.forEach(name => {
         summary.textContent = "Suma: " + sum
         cellCounter.textContent = parseInt(cellCounter.textContent) + 1
         countPercent()
-
-        let plusButtonTab = document.querySelectorAll(".plus")
-        plusButtonTab.forEach(button => {
-            if (button.classList.contains("plusClicked")) {
-                button.classList.remove("plusClicked")
-            }
-        });
-        event.target.classList.add("plusClicked")
     })
 
     minus.addEventListener("click", () => {
@@ -68,13 +70,5 @@ namesTab.forEach(name => {
             cellCounter.textContent = parseInt(cellCounter.textContent) - 1 
         }
         countPercent()
-
-        let minusButtonTab = document.querySelectorAll(".minus")
-        minusButtonTab.forEach(button => {
-            if (button.classList.contains("minusClicked")) {
-                button.classList.remove("minusClicked")
-            }
-        });
-        event.target.classList.add("minusClicked")
     })
 });
