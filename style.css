@@ -10,7 +10,7 @@ body{
     background-color: #2e3440;
 }
 .result{
-    height: 50vh;
+    height: 60vh;
     overflow: scroll;
 }
 .summary{
@@ -18,7 +18,7 @@ body{
     padding: 20px;
 }
 .separator{
-    width: 50vw;
+    width: 40vw;
     height: 1px;
     margin-left: auto;
     margin-right: auto;
