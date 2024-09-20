@@ -41,10 +41,29 @@ body{
     width: 100%;
     height: 100%;
     border-radius: 10px;
-    border: 1px solid aqua;
+    border: 1px solid #d8dee9;
+    overflow: hidden;
 }
 button{
     color: #2e3440;
+    border: 0px;
     width: 100%;
     height: 100%;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 20px
+}
+.plus{
+    background-color: #bf616a;
+    transition: ease-in-out 200ms;
+}
+.minus{
+    background-color: #81a1c1;
+    transition: ease-in-out 200ms;
+}
+.plusClicked{
+    background-color: #d08770;
+}
+.minusClicked{
+    background-color: #8fbcbb;
 }
